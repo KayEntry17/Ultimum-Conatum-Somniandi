@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bt6te2jpi7kvo"]
+
+[ext_resource type="Script" uid="uid://6xka5lv4u1uc" path="res://addons/bulletEditor/globalManager.gd" id="1_ustg1"]
+[ext_resource type="Resource" uid="uid://vxpyr2ibukct" path="res://addons/bulletEditor/bulletlist1.tres" id="2_8ubgl"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_ustg1")
+bullist = ExtResource("2_8ubgl")

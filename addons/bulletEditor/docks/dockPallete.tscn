@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcj2lbbt1hj2v"]
+
+[ext_resource type="Script" uid="uid://bbmg5wuhojctc" path="res://addons/bulletEditor/docks/dock_pallete.gd" id="1_lgmug"]
+
+[node name="DockPallete" type="Control" node_paths=PackedStringArray("tabarr")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lgmug")
+tabarr = [NodePath("MarginContainer/TabContainer/Standard/Standard/GridContainer"), NodePath("MarginContainer/TabContainer/Multi/Standard/GridContainer"), NodePath("MarginContainer/TabContainer/Focusing/Standard/GridContainer")]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 10
+
+[node name="TabContainer" type="TabContainer" parent="MarginContainer"]
+layout_mode = 2
+current_tab = 0
+
+[node name="Standard" type="MarginContainer" parent="MarginContainer/TabContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 10
+metadata/_tab_index = 0
+
+[node name="Standard" type="ScrollContainer" parent="MarginContainer/TabContainer/Standard"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/TabContainer/Standard/Standard"]
+layout_mode = 2
+columns = 3
+
+[node name="Multi" type="MarginContainer" parent="MarginContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 10
+metadata/_tab_index = 1
+
+[node name="Standard" type="ScrollContainer" parent="MarginContainer/TabContainer/Multi"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/TabContainer/Multi/Standard"]
+layout_mode = 2
+columns = 3
+
+[node name="Focusing" type="MarginContainer" parent="MarginContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 10
+metadata/_tab_index = 2
+
+[node name="Standard" type="ScrollContainer" parent="MarginContainer/TabContainer/Focusing"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/TabContainer/Focusing/Standard"]
+layout_mode = 2
+columns = 3

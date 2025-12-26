@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2u7wuu256bso"]
+
+[ext_resource type="Texture2D" uid="uid://ha6u62g6k65" path="res://addons/bulletEditor/assets/frame.png" id="1_ovflk"]
+[ext_resource type="Texture2D" uid="uid://bkbi64eq37asl" path="res://addons/bulletEditor/assets/frame2.png" id="2_cj3jt"]
+[ext_resource type="Script" uid="uid://rvuab8qj1hme" path="res://addons/bulletEditor/docks/pallete_button.gd" id="3_cj3jt"]
+[ext_resource type="Texture2D" uid="uid://kc5mbp37vpb3" path="res://addons/bulletEditor/assets/Knife.png" id="4_iemdb"]
+
+[node name="PalleteButton" type="TextureButton"]
+custom_minimum_size = Vector2(75, 75)
+toggle_mode = true
+texture_normal = ExtResource("1_ovflk")
+texture_pressed = ExtResource("2_cj3jt")
+texture_hover = ExtResource("1_ovflk")
+texture_disabled = ExtResource("1_ovflk")
+texture_focused = ExtResource("1_ovflk")
+stretch_mode = 4
+script = ExtResource("3_cj3jt")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer"]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+texture = ExtResource("4_iemdb")
+stretch_mode = 5
