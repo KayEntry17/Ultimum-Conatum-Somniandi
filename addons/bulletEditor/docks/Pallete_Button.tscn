@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://kc5mbp37vpb3" path="res://addons/bulletEditor/assets/Knife.png" id="4_iemdb"]
 
 [node name="PalleteButton" type="TextureButton"]
+texture_filter = 1
 custom_minimum_size = Vector2(75, 75)
 toggle_mode = true
 texture_normal = ExtResource("1_ovflk")
@@ -25,7 +26,10 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="CenterContainer"]
+texture_filter = 1
 custom_minimum_size = Vector2(65, 65)
 layout_mode = 2
 texture = ExtResource("4_iemdb")
 stretch_mode = 5
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

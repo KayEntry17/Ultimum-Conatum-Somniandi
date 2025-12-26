@@ -15,7 +15,7 @@ func _disable_plugin() -> void:
 func _enter_tree() -> void:
 	dockpallete= preload("res://addons/bulletEditor/docks/dockPallete.tscn").instantiate()
 	docktimeline = preload("res://addons/bulletEditor/docks/dockTimeline.tscn").instantiate()
-	add_control_to_dock(DOCK_SLOT_RIGHT_BR, dockpallete)
+	add_control_to_dock(DOCK_SLOT_RIGHT_BL, dockpallete)
 	add_control_to_bottom_panel(docktimeline, "Timeline")
 	
 	pass

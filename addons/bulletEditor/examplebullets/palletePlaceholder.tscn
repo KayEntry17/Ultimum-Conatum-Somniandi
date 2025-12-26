@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://31t41u1sm3aj"]
+[gd_scene load_steps=2 format=3 uid="uid://31t41u1sm3aj"]
+
+[ext_resource type="Texture2D" uid="uid://kc5mbp37vpb3" path="res://addons/bulletEditor/assets/Knife.png" id="1_t3pgd"]
 
 [node name="PalletePlaceholder" type="Node2D"]
+
+[node name="Knife" type="Sprite2D" parent="."]
+position = Vector2(-1, -3)
+texture = ExtResource("1_t3pgd")
