@@ -8,13 +8,15 @@ var editorshowhidden=true
 var curtime:float=0
 func _process(delta: float) -> void:
 	curscene=EditorInterface.get_edited_scene_root()
-	if ("time" in curscene):
-		curtime=curscene.time
-	else:
-		curtime=0
-	if Input.is_action_just_pressed("ui_accept") and Input.is_key_pressed(KEY_CTRL) and curid>=0:
-	
-		create_bullet()
+	#print(curscene)
+	if curscene!=null:
+		if ("time" in curscene):
+			curtime=curscene.time
+		else:
+			curtime=0
+		if Input.is_action_just_pressed("ui_accept") and Input.is_key_pressed(KEY_CTRL) and curid>=0:
+		
+			create_bullet()
 		#print("kys")
 func create_bullet():
 	var id=curid

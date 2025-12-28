@@ -1,81 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1xv8rc28x7a7"]
+[gd_scene load_steps=2 format=3 uid="uid://c1xv8rc28x7a7"]
 
-[ext_resource type="PackedScene" uid="uid://dbipsayk7xrk0" path="res://addons/bulletEditor/examplebullets/basicBullet.tscn" id="1_vo2qe"]
-[ext_resource type="PackedScene" uid="uid://31t41u1sm3aj" path="res://addons/bulletEditor/examplebullets/palletePlaceholder.tscn" id="2_7mlct"]
+[ext_resource type="Script" uid="uid://by7j73ulg733j" path="res://addons/bulletEditor/examplebullets/LinearBullet.gd" id="1_vo2qe"]
 
 [node name="AttackBase" type="Node2D"]
 
-[node name="BasicBullet" parent="." instance=ExtResource("1_vo2qe")]
-position = Vector2(-48.624634, -34.48693)
-
-[node name="PalletePlaceholder" parent="." instance=ExtResource("2_7mlct")]
-position = Vector2(150.71356, -26.215286)
-
-[node name="@Node2D@133701" parent="." instance=ExtResource("1_vo2qe")]
-position = Vector2(178.23169, 17.23436)
-
-[node name="@Node2D@133702" parent="." instance=ExtResource("1_vo2qe")]
-position = Vector2(33.399536, 42.724808)
-
-[node name="@Node2D@133703" parent="." instance=ExtResource("1_vo2qe")]
-position = Vector2(26.157898, -43.88481)
-
-[node name="@Node2D@133704" parent="." instance=ExtResource("1_vo2qe")]
-position = Vector2(75.69049, -13.470062)
-
-[node name="@Node2D@133705" parent="." instance=ExtResource("2_7mlct")]
-position = Vector2(139.12701, 57.20804)
-
-[node name="@Node2D@133706" parent="." instance=ExtResource("2_7mlct")]
-position = Vector2(100.60162, 10.5720825)
-
-[node name="@Node2D@133707" parent="." instance=ExtResource("2_7mlct")]
-position = Vector2(47.013733, 4.199463)
-
-[node name="@Node2D@133708" parent="." instance=ExtResource("2_7mlct")]
-position = Vector2(22.392273, -5.649124)
-
-[node name="@Node2D@133709" parent="." instance=ExtResource("2_7mlct")]
-position = Vector2(-21.347046, 26.793274)
-
-[node name="@Node2D@133710" parent="." instance=ExtResource("2_7mlct")]
-position = Vector2(97.12567, 70.822235)
-
-[node name="@Node2D@133717" parent="." instance=ExtResource("2_7mlct")]
-position = Vector2(139.7063, -112.24559)
-
-[node name="@Node2D@133718" parent="." instance=ExtResource("1_vo2qe")]
-position = Vector2(31.371887, -124.70115)
-
-[node name="@Node2D@133719" parent="." instance=ExtResource("1_vo2qe")]
-position = Vector2(127.83008, -81.83084)
-
-[node name="@Node2D@134027" type="Node2D" parent="." instance=ExtResource("1_vo2qe")]
-position = Vector2(-7.864502, 65.89554)
-
-[node name="@Node2D@134028" type="Node2D" parent="." instance=ExtResource("1_vo2qe")]
-position = Vector2(-46.885437, 61.586487)
-
-[node name="@Node2D@134029" type="Node2D" parent="." instance=ExtResource("1_vo2qe")]
-position = Vector2(0.03540039, -24.115845)
-
-[node name="@Node2D@134030" type="Node2D" parent="." instance=ExtResource("1_vo2qe")]
-position = Vector2(11.765625, -28.424896)
-
-[node name="@Node2D@134031" type="Node2D" parent="." instance=ExtResource("1_vo2qe")]
-position = Vector2(29.001831, -40.155098)
-
-[node name="@Node2D@134032" type="Node2D" parent="." instance=ExtResource("1_vo2qe")]
-position = Vector2(28.04425, 12.511139)
-
-[node name="@Node2D@134033" type="Node2D" parent="." instance=ExtResource("1_vo2qe")]
-position = Vector2(-94.285034, -42.30963)
-
-[node name="@Node2D@134034" type="Node2D" parent="." instance=ExtResource("1_vo2qe")]
-position = Vector2(59.643982, -47.33686)
-
-[node name="@Node2D@134035" type="Node2D" parent="." instance=ExtResource("1_vo2qe")]
-position = Vector2(-21.509888, -14.300766)
-
-[node name="@Node2D@134036" type="Node2D" parent="." instance=ExtResource("1_vo2qe")]
-position = Vector2(135.05249, -11.906845)
+[node name="Linear Bullet" type="Node2D" parent="."]
+script = ExtResource("1_vo2qe")
+metadata/_custom_type_script = "uid://by7j73ulg733j"

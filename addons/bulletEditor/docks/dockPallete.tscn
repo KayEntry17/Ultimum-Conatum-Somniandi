@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dcj2lbbt1hj2v"]
+[gd_scene load_steps=2 format=3 uid="uid://dcj2lbbt1hj2v"]
 
 [ext_resource type="Script" uid="uid://bbmg5wuhojctc" path="res://addons/bulletEditor/docks/dock_pallete.gd" id="1_lgmug"]
-[ext_resource type="PackedScene" uid="uid://c2u7wuu256bso" path="res://addons/bulletEditor/docks/Pallete_Button.tscn" id="2_sh7ic"]
 
 [node name="DockPallete" type="Control" node_paths=PackedStringArray("tabarr")]
 layout_mode = 3
@@ -76,5 +75,5 @@ layout_mode = 2
 layout_mode = 2
 columns = 3
 
-[node name="PalleteButton" parent="MarginContainer/TabContainer/Focusing/Standard/GridContainer" instance=ExtResource("2_sh7ic")]
-layout_mode = 2
+[connection signal="pressed" from="MarginContainer/TabContainer/Focusing/Standard/GridContainer/@TextureButton@21023" to="MarginContainer/TabContainer/Focusing/Standard/GridContainer/@TextureButton@21023" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/TabContainer/Focusing/Standard/GridContainer/@TextureButton@21024" to="MarginContainer/TabContainer/Focusing/Standard/GridContainer/@TextureButton@21024" method="_on_pressed"]

@@ -13,6 +13,11 @@ func _disable_plugin() -> void:
 
 
 func _enter_tree() -> void:
+	#add_custom_type("Empty Bullet", "Bullets", preload("res://addons/bulletEditor/examplebullets/basicbullet.gd"), EditorInterface.get_editor_theme().get_icon("Skeleton2D", "EditorIcons"))
+	#add_custom_type("Circular Bullet", "Bullets", preload("res://addons/bulletEditor/examplebullets/circularbullet.gd"), EditorInterface.get_editor_theme().get_icon("Skeleton2D", "EditorIcons"))
+	#add_custom_type("Linear Bullet", "Node2D", preload("res://addons/bulletEditor/examplebullets/LinearBullet.gd"), EditorInterface.get_editor_theme().get_icon("Skeleton2D", "EditorIcons"))
+	#add_custom_type("Ranged Bullet", "Bullets", preload("res://addons/bulletEditor/examplebullets/RangedBullet.gd"), EditorInterface.get_editor_theme().get_icon("Skeleton2D", "EditorIcons"))
+
 	dockpallete= preload("res://addons/bulletEditor/docks/dockPallete.tscn").instantiate()
 	docktimeline = preload("res://addons/bulletEditor/docks/dockTimeline.tscn").instantiate()
 	add_control_to_dock(DOCK_SLOT_RIGHT_BL, dockpallete)
