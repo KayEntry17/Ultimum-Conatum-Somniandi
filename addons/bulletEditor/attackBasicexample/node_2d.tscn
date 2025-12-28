@@ -5,7 +5,7 @@
 
 [node name="AttackBase" type="Node2D"]
 script = ExtResource("1_7mlct")
-time = 40.0
 endTime = 600.0
 
 [node name="LinearBullet" parent="." instance=ExtResource("2_7mlct")]
+angle = 0.0

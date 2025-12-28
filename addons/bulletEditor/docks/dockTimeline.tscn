@@ -45,6 +45,8 @@ anchor_bottom = 1.0
 offset_top = -16.0
 grow_horizontal = 2
 grow_vertical = 0
+step = 0.01
+value = 1.0
 
 [node name="endTime" type="LineEdit" parent="Control/Control"]
 z_index = 1
@@ -58,6 +60,7 @@ grow_horizontal = 0
 script = ExtResource("3_ptsjh")
 
 [node name="modTime" type="Sprite2D" parent="Control/Control/endTime" node_paths=PackedStringArray("progressbar")]
+visible = false
 modulate = Color(1, 0.24313726, 1, 0.5176471)
 top_level = true
 position = Vector2(585.5088, 622)
@@ -69,6 +72,7 @@ progressbar = NodePath("../../ProgressBar")
 percentdone = 50.84
 
 [node name="startTime" type="Sprite2D" parent="Control/Control/endTime" node_paths=PackedStringArray("progressbar")]
+visible = false
 modulate = Color(3.85046e-07, 0.71687376, 0.8781259, 0.5176471)
 top_level = true
 position = Vector2(123.2, 622)
@@ -80,6 +84,7 @@ progressbar = NodePath("../../ProgressBar")
 percentdone = 10.0
 
 [node name="endTime" type="Sprite2D" parent="Control/Control/endTime" node_paths=PackedStringArray("progressbar")]
+visible = false
 modulate = Color(1, 0.46666667, 0.54509807, 0.6745098)
 top_level = true
 position = Vector2(942.768, 622)
@@ -117,7 +122,7 @@ layout_mode = 2
 texture_normal = ExtResource("5_pig2b")
 function = "play_stop"
 
-[node name="LineEdit" type="LineEdit" parent="Control/HBoxContainer/play_stop"]
+[node name="LineEdit" type="LineEdit" parent="Control/HBoxContainer/play_stop" node_paths=PackedStringArray("timeLine")]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -132,6 +137,7 @@ grow_vertical = 0
 text = "1000"
 alignment = 1
 script = ExtResource("5_s5trc")
+timeLine = NodePath("../../../Control/ProgressBar")
 
 [node name="move" parent="Control/HBoxContainer" instance=ExtResource("1_g77iy")]
 layout_mode = 2
@@ -148,6 +154,8 @@ layout_mode = 2
 texture_normal = ExtResource("8_fu6hu")
 function = "load"
 
+[connection signal="drag_ended" from="Control/Control/ProgressBar" to="Control/HBoxContainer/play_stop/LineEdit" method="_on_progress_bar_drag_ended"]
+[connection signal="drag_started" from="Control/Control/ProgressBar" to="Control/HBoxContainer/play_stop/LineEdit" method="_on_progress_bar_drag_started"]
 [connection signal="editing_toggled" from="Control/Control/endTime" to="Control/Control/endTime" method="_on_editing_toggled"]
 [connection signal="text_submitted" from="Control/Control/endTime" to="Control/Control/endTime" method="_on_text_submitted"]
 [connection signal="editing_toggled" from="Control/HBoxContainer/play_stop/LineEdit" to="Control/HBoxContainer/play_stop/LineEdit" method="_on_editing_toggled"]
