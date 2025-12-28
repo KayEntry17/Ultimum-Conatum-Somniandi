@@ -11,10 +11,17 @@ func _process(delta: float) -> void:
 	
 	if curscene!=null :
 		
-		if ("time" in curscene):
-			
+		if ("endTime" in curscene):
+			#print(curscene)
 			if !currentlyedited or curscene!=cursceneprev:
-				self.text=str(curscene.time)
+				self.text=str(curscene.endTime)
+			
+			if VISDES.selected_node!=null:
+				#print(VISDES.selected_node)
+				for i in get_children():
+					#print(i)
+					if (i.name in VISDES.selected_node):
+						i.percentdone=VISDES.selected_node.get(i.name)/curscene.endTime*100
 	
 	
 
@@ -24,6 +31,6 @@ func _on_editing_toggled(toggled_on: bool) -> void:
 
 
 func _on_text_submitted(new_text: String) -> void:
-	if ("time" in curscene):
+	if ("endTime" in curscene):
 		
-		curscene.time=float(text)
+		curscene.endTime=float(text)

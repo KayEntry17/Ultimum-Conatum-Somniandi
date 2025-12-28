@@ -6,7 +6,7 @@ var circles
 var player
 var editorshowhidden:=false 
 @export var time:=0.0
-@export var endTime:=1000
+@export var endTime:float=1000
 @export var title:String
 #func _ready() -> void:
 	#time=0

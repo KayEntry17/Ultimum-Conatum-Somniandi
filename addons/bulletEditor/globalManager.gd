@@ -4,9 +4,28 @@ extends Node
 var curscene
 var curid:int=0
 var mode:int
-var editorshowhidden=true
+var editorshowhidden=false
 var curtime:float=0
+var curbul
+var eds
+var selected_node
+var selected
+func _ready() -> void:
+	var dummy_ep = EditorPlugin.new()
+	eds =dummy_ep.get_editor_interface().get_selection()
+	eds.selection_changed.connect(_on_selection_changed)
+	dummy_ep.queue_free()
+	
+func _on_selection_changed():
+	
+	selected = eds.get_selected_nodes() 
+	if selected.size()!=0:
+		selected_node = selected[0]
+	else:
+		selected_node=null
+		
 func _process(delta: float) -> void:
+	#print(selected)
 	if Engine.is_editor_hint():
 		curscene=EditorInterface.get_edited_scene_root()
 	else:
@@ -35,7 +54,17 @@ func create_bullet():
 	undo_redo.add_do_reference(bulin);	
 	undo_redo.add_undo_method(curscene, "remove_child", bulin);
 	undo_redo.commit_action()
-	
+func hide(button):
+	for i in selected:
+		print(i)
+		if "editorhidden" in i:
+			print(i)
+			i.editorhidden=true
+func unhide(button):
+	for i in selected:
+		if "editorhidden" in i:
+			print(i)
+			i.editorhidden=false
 func ghost(button):
 	if button.on==true:
 		button.turnon()
