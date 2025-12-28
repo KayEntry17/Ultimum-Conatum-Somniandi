@@ -7,7 +7,10 @@ var mode:int
 var editorshowhidden=true
 var curtime:float=0
 func _process(delta: float) -> void:
-	curscene=EditorInterface.get_edited_scene_root()
+	if Engine.is_editor_hint():
+		curscene=EditorInterface.get_edited_scene_root()
+	else:
+		curscene=get_tree().current_scene
 	#print(curscene)
 	if curscene!=null:
 		if ("time" in curscene):
@@ -32,4 +35,12 @@ func create_bullet():
 	undo_redo.add_do_reference(bulin);	
 	undo_redo.add_undo_method(curscene, "remove_child", bulin);
 	undo_redo.commit_action()
+	
+func ghost(button):
+	if button.on==true:
+		button.turnon()
+		editorshowhidden=true
+	else:
+		button.turnoff()
+		editorshowhidden=false
 	

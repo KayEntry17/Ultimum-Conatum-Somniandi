@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://5hca8lg7pwhn"]
+
+[ext_resource type="Texture2D" uid="uid://bwfj6fw1jccxe" path="res://addons/bulletEditor/assets/menu7.png" id="1_hhbrp"]
+[ext_resource type="Script" uid="uid://dxownsncsvsy8" path="res://addons/bulletEditor/docks/button_editor.gd" id="2_ner0r"]
+
+[node name="ButtonEditor" type="TextureButton"]
+texture_filter = 1
+custom_minimum_size = Vector2(100, 50)
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_hhbrp")
+stretch_mode = 4
+script = ExtResource("2_ner0r")
+coloron = Color(0.93333334, 0.8235294, 0.3882353, 1)
+coloroff = Color(1, 1, 1, 1)
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
