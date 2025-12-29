@@ -1,20 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://bq5u1wue4i5ue"]
+[gd_scene load_steps=5 format=3 uid="uid://bq5u1wue4i5ue"]
 
 [ext_resource type="Script" uid="uid://by7j73ulg733j" path="res://addons/bulletEditor/examplebullets/LinearBullet.gd" id="1_332im"]
 [ext_resource type="Texture2D" uid="uid://q2mllmbewx1y" path="res://addons/bulletEditor/assets/Small_bullet.png" id="2_uto1v"]
-[ext_resource type="Script" uid="uid://b1rqfmm5dawop" path="res://addons/bulletEditor/modules/spawners/basic.gd" id="3_o68jb"]
-[ext_resource type="PackedScene" uid="uid://ds5vd6tbqehhb" path="res://addons/bulletEditor/examplebullets/aimbullet.tscn" id="4_tyyo0"]
+[ext_resource type="PackedScene" uid="uid://cxt1485x1u3n1" path="res://addons/bulletEditor/modules/spawners/basic.tscn" id="3_o68jb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iuvff"]
 radius = 3.0
 
 [node name="LinearBullet" type="Node2D" node_paths=PackedStringArray("movable")]
 script = ExtResource("1_332im")
+speed = 50.0
 colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
 movable = NodePath("Area2D")
 metadata/_custom_type_script = "uid://by7j73ulg733j"
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
+position = Vector2(2054.736, 0)
 collision_layer = 2
 monitoring = false
 
@@ -25,6 +27,6 @@ shape = SubResource("CircleShape2D_iuvff")
 position = Vector2(1, 1)
 texture = ExtResource("2_uto1v")
 
-[node name="Node" type="Node" parent="."]
-script = ExtResource("3_o68jb")
-spawned_bullet = ExtResource("4_tyyo0")
+[node name="Node" parent="." instance=ExtResource("3_o68jb")]
+timebetween = 0.05
+count = 30

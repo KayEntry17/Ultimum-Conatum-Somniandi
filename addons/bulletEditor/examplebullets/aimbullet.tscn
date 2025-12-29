@@ -6,10 +6,12 @@
 
 [node name="AimingBullet" type="Node2D" node_paths=PackedStringArray("movable")]
 script = ExtResource("1_dadco")
+speed = 100.0
 movable = NodePath("SmallBullet")
 metadata/_custom_type_script = "uid://by7j73ulg733j"
 
 [node name="SmallBullet" type="Sprite2D" parent="."]
+position = Vector2(556, 0)
 texture = ExtResource("2_xnomi")
 
 [node name="Node" type="Node" parent="."]

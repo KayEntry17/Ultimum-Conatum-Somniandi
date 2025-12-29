@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxt1485x1u3n1"]
+
+[ext_resource type="Script" uid="uid://b1rqfmm5dawop" path="res://addons/bulletEditor/modules/spawners/basic.gd" id="1_pvhs4"]
+[ext_resource type="PackedScene" uid="uid://ds5vd6tbqehhb" path="res://addons/bulletEditor/examplebullets/aimbullet.tscn" id="2_82q0t"]
+
+[node name="Node" type="Node2D"]
+script = ExtResource("1_pvhs4")
+spawned_bullet = ExtResource("2_82q0t")
+timebetween = 0.2
+assignmentlist = Dictionary[String, float]({
+"": 0.0,
+"angle": 21.895
+})
+count = 10

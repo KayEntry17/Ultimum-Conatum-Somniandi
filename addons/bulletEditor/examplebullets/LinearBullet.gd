@@ -17,18 +17,18 @@ func _ready() -> void:
 	if movable.get_child_count()!=0:
 		if "disabled" in movable.get_child(0):
 			colshape=true
-	global_position=Vector2(bulposx,bulposy)
+	position=Vector2(bulposx,bulposy)
 	
 	inipos=global_position
 	#print(101)
-func move():
-	return (Vector2((speed*(VISDES.curtime-startTime))*cos(deg_to_rad(angle)),(speed*(VISDES.curtime-startTime))*sin(deg_to_rad(angle))))
+func move(times):
+	return (Vector2((speed*(times-startTime))*cos(deg_to_rad(angle)),(speed*(times-startTime))*sin(deg_to_rad(angle))))
 func _process(delta: float) -> void:
 	#_ready()
 	#print(self)
 	#print(Vector2(bulposx,bulposy))
 	super(delta)
-	movable.position=move()
+	movable.position=move(VISDES.curtime)
 	queue_redraw()
 	if colshape:
 		movable.get_child(0).disabled=!active

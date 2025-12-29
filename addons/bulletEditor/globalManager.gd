@@ -15,10 +15,18 @@ var playing=false
 var selected
 func _ready() -> void:
 	if Engine.is_editor_hint():
+		curscene=EditorInterface.get_edited_scene_root()
+	else:
+		curscene=get_tree().current_scene
+	if Engine.is_editor_hint():
 		var dummy_ep = EditorPlugin.new()
 		eds =dummy_ep.get_editor_interface().get_selection()
 		eds.selection_changed.connect(_on_selection_changed)
 		dummy_ep.queue_free()
+	else:
+		playing=true
+		curscene.time=0
+		
 	
 func _on_selection_changed():
 	
@@ -35,16 +43,17 @@ func _process(delta: float) -> void:
 		playerpos=player.global_position
 	else:
 		playerpos=Vector2(0,0)
+	
 	if Engine.is_editor_hint():
 		curscene=EditorInterface.get_edited_scene_root()
 	else:
 		curscene=get_tree().current_scene
-	#print(curscene)
+	#print(curscene.time)
 	if curscene!=null:
 		if ("time" in curscene):
 			curtime=curscene.time
 			if playing:
-				curscene.time+=delta
+				curscene.time+=delta*2
 		else:
 			curtime=0
 		if Input.is_action_just_pressed("ui_accept") and Input.is_key_pressed(KEY_CTRL) and curid>=0:
