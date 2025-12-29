@@ -15,19 +15,21 @@ var playing=false
 var selected
 var realtime=true
 func _ready() -> void:
+	print()
 	if Engine.is_editor_hint():
-		curscene=get_node_or_null("/root/EditorInterface").get_edited_scene_root()
+		curscene=Engine.get_singleton("EditorInterface").get_edited_scene_root()
 		realtime=false
 	else:
 		curscene=get_tree().current_scene
 	if Engine.is_editor_hint():
-		var dummy_ep = get_node_or_null("/root/EditorInterface").new()
+		var dummy_ep = Engine.get_singleton("EditorPlugin").new()
 		eds =dummy_ep.get_editor_interface().get_selection()
 		eds.selection_changed.connect(_on_selection_changed)
 		dummy_ep.queue_free()
 	else:
 		playing=true
-		curscene.time=0
+		if ("time" in curscene):
+			curscene.time=0
 		
 	
 func _on_selection_changed():
@@ -47,7 +49,7 @@ func _process(delta: float) -> void:
 		playerpos=Vector2(0,0)
 	
 	if Engine.is_editor_hint():
-		curscene=EditorInterface.get_edited_scene_root()
+		curscene=Engine.get_singleton("EditorInterface").get_edited_scene_root()
 	else:
 		curscene=get_tree().current_scene
 	#print(curscene.time)
@@ -64,7 +66,7 @@ func _process(delta: float) -> void:
 		#print("kys")
 func create_bullet():
 	var id=curid
-	var dummy_ep =EditorPlugin.new()
+	var dummy_ep =Engine.get_singleton("EditorPlugin").new()
 	var undo_redo=dummy_ep.get_undo_redo()
 	dummy_ep.queue_free()
 	var bulin=bullist.BulletObjects[id].instantiate()

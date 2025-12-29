@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Ultimum Conatum Somniandi"
-run/main_scene="uid://creylleiu2whb"
+run/main_scene="uid://c1xv8rc28x7a7"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 

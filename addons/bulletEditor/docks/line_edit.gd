@@ -7,7 +7,7 @@ var beingdragged=false
 func _process(delta: float) -> void:
 	var cursceneprev=curscene
 	if Engine.is_editor_hint():
-		curscene=get_node_or_null("/root/EditorInterface").get_edited_scene_root()
+		curscene=Engine.get_singleton("EditorInterface").get_edited_scene_root()
 	else:
 		curscene=get_tree().current_scene
 	

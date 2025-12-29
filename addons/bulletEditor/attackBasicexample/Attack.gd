@@ -8,10 +8,10 @@ var editorshowhidden:=false
 @export var time:=0.0
 @export var endTime:float=1000
 @export var title:String
-#func _ready() -> void:
-	#time=0
+func _ready() -> void:
+	loads()
 #func _process(delta: float) -> void:
-	##print(get_child_count())
+	#print(get_child_count())
 func remake_list():
 	attlist=[]
 	for i in get_children():
@@ -25,7 +25,7 @@ func remake_list():
 	attlist.sort_custom(func(a, b): return a[1] < b[1])
 func rebuild_list():
 	for i in attlist:
-		var curscene=EditorInterface.get_edited_scene_root()
+		#var curscene=Engine.get_singleton("EditorInterface").get_edited_scene_root()
 		var bulin=VISDES.bullist.BulletObjects[i[0]].instantiate()
 		var k=0
 		for j in bulin.saveProperties:
