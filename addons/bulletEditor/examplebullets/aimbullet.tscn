@@ -1,18 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://ds5vd6tbqehhb"]
+[gd_scene load_steps=5 format=3 uid="uid://ds5vd6tbqehhb"]
 
 [ext_resource type="Script" uid="uid://by7j73ulg733j" path="res://addons/bulletEditor/examplebullets/LinearBullet.gd" id="1_dadco"]
 [ext_resource type="Texture2D" uid="uid://q2mllmbewx1y" path="res://addons/bulletEditor/assets/Small_bullet.png" id="2_xnomi"]
 [ext_resource type="Script" uid="uid://wghpeafuhx5u" path="res://addons/bulletEditor/modules/aimOnstart.gd" id="3_hhv3a"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_dadco"]
+radius = 3.0
+
 [node name="AimingBullet" type="Node2D" node_paths=PackedStringArray("movable")]
 script = ExtResource("1_dadco")
 speed = 100.0
-movable = NodePath("SmallBullet")
+movable = NodePath("Area2D")
 metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="SmallBullet" type="Sprite2D" parent="."]
-position = Vector2(556, 0)
-texture = ExtResource("2_xnomi")
 
 [node name="Node" type="Node" parent="."]
 script = ExtResource("3_hhv3a")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(556, 0)
+collision_layer = 2
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_dadco")
+
+[node name="SmallBullet" type="Sprite2D" parent="Area2D"]
+position = Vector2(1, 1)
+texture = ExtResource("2_xnomi")

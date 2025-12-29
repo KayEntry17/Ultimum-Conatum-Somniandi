@@ -10,6 +10,8 @@ var editorshowhidden:=false
 @export var title:String
 #func _ready() -> void:
 	#time=0
+#func _process(delta: float) -> void:
+	##print(get_child_count())
 func remake_list():
 	attlist=[]
 	for i in get_children():
