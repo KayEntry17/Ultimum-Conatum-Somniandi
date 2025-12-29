@@ -20,7 +20,7 @@ func _ready() -> void:
 	global_position=Vector2(bulposx,bulposy)
 	
 	inipos=global_position
-	print(101)
+	#print(101)
 func move():
 	return (Vector2((speed*(VISDES.curtime-startTime))*cos(deg_to_rad(angle)),(speed*(VISDES.curtime-startTime))*sin(deg_to_rad(angle))))
 func _process(delta: float) -> void:

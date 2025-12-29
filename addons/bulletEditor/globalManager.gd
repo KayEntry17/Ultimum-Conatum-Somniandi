@@ -11,6 +11,7 @@ var eds
 var selected_node
 var player: Node
 var playerpos:Vector2
+var playing=false
 var selected
 func _ready() -> void:
 	if Engine.is_editor_hint():
@@ -29,6 +30,7 @@ func _on_selection_changed():
 		
 func _process(delta: float) -> void:
 	#print(selected)
+	
 	if player!=null:
 		playerpos=player.global_position
 	else:
@@ -41,6 +43,8 @@ func _process(delta: float) -> void:
 	if curscene!=null:
 		if ("time" in curscene):
 			curtime=curscene.time
+			if playing:
+				curscene.time+=delta
 		else:
 			curtime=0
 		if Input.is_action_just_pressed("ui_accept") and Input.is_key_pressed(KEY_CTRL) and curid>=0:
@@ -74,6 +78,13 @@ func unhide(button):
 		if "editorhidden" in i:
 			print(i)
 			i.editorhidden=false
+func play_stop(button):
+	if button.on==true:
+		button.turnon()
+		playing=true
+	else:
+		button.turnoff()
+		playing=false
 func ghost(button):
 	if button.on==true:
 		button.turnon()

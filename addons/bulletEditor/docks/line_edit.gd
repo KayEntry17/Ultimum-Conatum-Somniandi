@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 					
 				else:
 					curscene.time=timeLine.value*curscene.endTime/100
-					print(curscene.endTime)
+					#print(curscene.endTime)
 					
 					
 					

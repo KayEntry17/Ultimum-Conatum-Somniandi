@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bq5u1wue4i5ue"]
+[gd_scene load_steps=6 format=3 uid="uid://bq5u1wue4i5ue"]
 
 [ext_resource type="Script" uid="uid://by7j73ulg733j" path="res://addons/bulletEditor/examplebullets/LinearBullet.gd" id="1_332im"]
 [ext_resource type="Texture2D" uid="uid://q2mllmbewx1y" path="res://addons/bulletEditor/assets/Small_bullet.png" id="2_uto1v"]
+[ext_resource type="Script" uid="uid://b1rqfmm5dawop" path="res://addons/bulletEditor/modules/spawners/basic.gd" id="3_o68jb"]
+[ext_resource type="PackedScene" uid="uid://ds5vd6tbqehhb" path="res://addons/bulletEditor/examplebullets/aimbullet.tscn" id="4_tyyo0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iuvff"]
 radius = 3.0
@@ -22,3 +24,7 @@ shape = SubResource("CircleShape2D_iuvff")
 [node name="SmallBullet" type="Sprite2D" parent="Area2D"]
 position = Vector2(1, 1)
 texture = ExtResource("2_uto1v")
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("3_o68jb")
+spawned_bullet = ExtResource("4_tyyo0")
