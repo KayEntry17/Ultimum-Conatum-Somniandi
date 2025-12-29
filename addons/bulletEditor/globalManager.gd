@@ -13,13 +13,15 @@ var player: Node
 var playerpos:Vector2
 var playing=false
 var selected
+var realtime=true
 func _ready() -> void:
 	if Engine.is_editor_hint():
-		curscene=EditorInterface.get_edited_scene_root()
+		curscene=get_node_or_null("/root/EditorInterface").get_edited_scene_root()
+		realtime=false
 	else:
 		curscene=get_tree().current_scene
 	if Engine.is_editor_hint():
-		var dummy_ep = EditorPlugin.new()
+		var dummy_ep = get_node_or_null("/root/EditorInterface").new()
 		eds =dummy_ep.get_editor_interface().get_selection()
 		eds.selection_changed.connect(_on_selection_changed)
 		dummy_ep.queue_free()

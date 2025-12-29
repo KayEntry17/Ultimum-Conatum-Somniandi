@@ -42,25 +42,37 @@ func move(times):
 	return (Vector2((speed*(times-startTime))*cos(deg_to_rad(angle)),(speed*(times-startTime))*sin(deg_to_rad(angle))))
 func _process(delta: float) -> void:
 	timess=VISDES.curtime
-	if startTime<=timess and endTime>=timess:
-		active=true
-	else:
-		active=false
 	#print(active)
-	if active:
+	if startTime<=timess and endTime>=timess:
+		#movable.process_mode=Node.PROCESS_MODE_PAUSABLE
+		active=true
 		visible=true
+		#print(active)
 		movable.position=move(timess)
 		if Engine.is_editor_hint():
 			queue_redraw()
-			if editorhidden and !VISDES.editorshowhidden:
-				visible=true
-			else:
-				visible=false
+			
+			if editorhidden :
+				if VISDES.editorshowhidden:
+					visible=true
+				else:
+					visible=false
+		
+	else:
+		active=false
+		#movable.process_mode=Node.PROCESS_MODE_DISABLED
+		visible=false
+		
+		if timess>endTime and VISDES.realtime:
+			queue_free()
+			#print(VISDES.realtime)
+	#print(visible)
+	#print(active)
+	
 		#if colshape:
 			#movable.get_child(0).disabled=!active
 		#print(movable.get_child(0).disabled)
-	else:
-		visible=false	
+	
 func _draw() -> void:
 	if Engine.is_editor_hint():
 		draw_line(Vector2(0,0), Vector2(1000*cos(deg_to_rad(angle)),1000*sin(deg_to_rad(angle))), colhint,3, false)

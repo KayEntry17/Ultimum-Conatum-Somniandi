@@ -8,6 +8,7 @@
 radius = 3.0
 
 [node name="AimingBullet" type="Node2D" node_paths=PackedStringArray("movable")]
+visible = false
 script = ExtResource("1_dadco")
 speed = 100.0
 movable = NodePath("Area2D")
@@ -17,7 +18,7 @@ metadata/_custom_type_script = "uid://by7j73ulg733j"
 script = ExtResource("3_hhv3a")
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(556, 0)
+position = Vector2(399, 0)
 collision_layer = 2
 monitoring = false
 

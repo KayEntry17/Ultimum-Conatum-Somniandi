@@ -1,3 +1,4 @@
 extends Area2D
 func _process(delta: float) -> void:
-	print(get_overlapping_areas())
+	
+	print(Engine.get_frames_per_second())

@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Ultimum Conatum Somniandi"
+run/main_scene="uid://creylleiu2whb"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -23,6 +24,7 @@ VISDES="*res://addons/bulletEditor/MAKEGLOBALbulletManager.tscn"
 window/size/viewport_width=640
 window/size/viewport_height=360
 window/stretch/mode="canvas_items"
+window/vsync/vsync_mode=0
 
 [editor_plugins]
 

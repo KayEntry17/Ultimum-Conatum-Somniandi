@@ -15,8 +15,7 @@ movable = NodePath("Area2D")
 metadata/_custom_type_script = "uid://by7j73ulg733j"
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
-position = Vector2(2054.736, 0)
+position = Vector2(313.5, 0)
 collision_layer = 2
 monitoring = false
 
@@ -29,4 +28,5 @@ texture = ExtResource("2_uto1v")
 
 [node name="Node" parent="." instance=ExtResource("3_o68jb")]
 timebetween = 0.1
-count = 100
+endtimeoffset = 5.5
+count = 50
