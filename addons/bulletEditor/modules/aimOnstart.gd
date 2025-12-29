@@ -5,6 +5,7 @@ func _ready() -> void:
 	parent=get_parent()
 	parent.angle=rad_to_deg(parent.global_position.angle_to_point(VISDES.playerpos))
 	parent.global_rotation=0
+	print(parent.angle)
 func _process(delta: float) -> void:
 
 	if Engine.is_editor_hint():

@@ -14,6 +14,7 @@ var playerpos:Vector2
 var playing=false
 var selected
 var realtime=true
+@export var edplug:Node
 func _ready() -> void:
 	print()
 	if Engine.is_editor_hint():
@@ -22,10 +23,10 @@ func _ready() -> void:
 	else:
 		curscene=get_tree().current_scene
 	if Engine.is_editor_hint():
-		var dummy_ep = Engine.get_singleton("EditorPlugin").new()
-		eds =dummy_ep.get_editor_interface().get_selection()
+		#var dummy_ep = Engine.get_singleton("EditorPlugin").new()
+		eds =Engine.get_singleton("EditorInterface").get_selection()
 		eds.selection_changed.connect(_on_selection_changed)
-		dummy_ep.queue_free()
+		#dummy_ep.queue_free()
 	else:
 		playing=true
 		if ("time" in curscene):
@@ -65,21 +66,10 @@ func _process(delta: float) -> void:
 			create_bullet()
 		#print("kys")
 func create_bullet():
-	var id=curid
-	var dummy_ep =Engine.get_singleton("EditorPlugin").new()
-	var undo_redo=dummy_ep.get_undo_redo()
-	dummy_ep.queue_free()
-	var bulin=bullist.BulletObjects[id].instantiate()
-	undo_redo.create_action("Bullet Created")
-	bulin.bulposx=curscene.get_global_mouse_position().x
-	bulin.startTime=curtime
-	bulin.endTime=curtime+100
-	bulin.bulposy=curscene.get_global_mouse_position().y
-	undo_redo.add_do_method(curscene, "add_child", bulin);
-	undo_redo.add_do_method(bulin, "set_owner", curscene);
-	undo_redo.add_do_reference(bulin);	
-	undo_redo.add_undo_method(curscene, "remove_child", bulin);
-	undo_redo.commit_action()
+	if edplug!=null:
+		edplug.create_bullet(bullist.BulletObjects[curid],curscene, curtime)
+	#var bulin=bullist.BulletObjects[id].instantiate()
+	
 func hide(button):
 	for i in selected:
 		print(i)

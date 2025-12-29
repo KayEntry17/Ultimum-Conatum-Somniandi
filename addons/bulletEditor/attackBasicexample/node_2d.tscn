@@ -4,16 +4,14 @@
 [ext_resource type="PackedScene" uid="uid://bq5u1wue4i5ue" path="res://addons/bulletEditor/examplebullets/linear_bullet.tscn" id="2_7mlct"]
 [ext_resource type="Script" uid="uid://dj3wv0v5a68gf" path="res://addons/bulletEditor/attackBasicexample/area_2d.gd" id="2_whqlj"]
 [ext_resource type="Script" uid="uid://by7j73ulg733j" path="res://addons/bulletEditor/examplebullets/LinearBullet.gd" id="4_whqlj"]
+[ext_resource type="PackedScene" uid="uid://ds5vd6tbqehhb" path="res://addons/bulletEditor/examplebullets/aimbullet.tscn" id="5_g5u5j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m5chy"]
 radius = 19.697716
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m5chy"]
-size = Vector2(714, 442)
-
 [node name="AttackBase" type="Node2D"]
 script = ExtResource("1_7mlct")
-time = 7.557562666666667
+time = 1.92
 endTime = 600.0
 title = "att1"
 
@@ -27,1142 +25,108 @@ script = ExtResource("2_whqlj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_m5chy")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -1)
-shape = SubResource("RectangleShape2D_m5chy")
-
-[node name="@Node2D@112076" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-137.27307, -104.57454)
-script = ExtResource("4_whqlj")
-bulposx = -137.273071289063
-bulposy = -104.57453918457
-startTime = 1.356
-endTime = 138.531022666664
-speed = 100.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@112126" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(246.04626, -82.38307)
-script = ExtResource("4_whqlj")
-bulposx = 246.046264648438
-bulposy = -82.3830718994141
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@112176" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-209.01038, 85.13545)
-script = ExtResource("4_whqlj")
-bulposx = -209.010375976563
-bulposy = 85.1354522705078
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@112226" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-175.50671, -39.125122)
-script = ExtResource("4_whqlj")
-bulposx = -175.506713867188
-bulposy = -39.125122
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-angle = -20.3856716156006
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@112276" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-13.501343, 3.708725)
-script = ExtResource("4_whqlj")
-bulposx = -13.501343
-bulposy = 3.70872497558594
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-angle = 150.207977294922
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@112326" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(153.59302, 43.5739)
-script = ExtResource("4_whqlj")
-bulposx = 153.59302
-bulposy = 43.5738983154297
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-angle = 17.2098560333252
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@112376" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(241.38123, 46.96669)
-script = ExtResource("4_whqlj")
-bulposx = 241.381225585938
-bulposy = 46.9666900634766
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-angle = -38.8133010864258
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@112426" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-161.0874, 38.060623)
-script = ExtResource("4_whqlj")
-bulposx = -161.0874
-bulposy = 38.0606231689453
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-angle = 9.41496658325195
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@112476" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-212.79028, -62.628998)
-script = ExtResource("4_whqlj")
-bulposx = -212.79028
-bulposy = -62.6289978027344
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@112526" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-110.33838, 70.558624)
-script = ExtResource("4_whqlj")
-bulposx = -110.33838
-bulposy = 70.5586242675781
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@112576" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(203.1648, 28.211792)
-script = ExtResource("4_whqlj")
-bulposx = 203.1648
-bulposy = 28.211792
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@112626" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(244.14551, -50.334763)
-script = ExtResource("4_whqlj")
-bulposx = 244.14551
-bulposy = -50.3347625732422
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@112676" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-91.21399, -62.628998)
-script = ExtResource("4_whqlj")
-bulposx = -91.21399
-bulposy = -62.6289978027344
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@112726" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-159.51526, -111.80597)
-script = ExtResource("4_whqlj")
-bulposx = -159.515258789063
-bulposy = -111.805969238281
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@112776" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-148.58704, 2.940277)
-script = ExtResource("4_whqlj")
-bulposx = -148.587036132813
-bulposy = 2.94027709960938
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@112826" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-3.788208, 42.555054)
-script = ExtResource("4_whqlj")
-bulposx = -3.788208
-bulposy = 42.555054
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@112876" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(201.79883, 24.796722)
-script = ExtResource("4_whqlj")
-bulposx = 201.79883
-bulposy = 24.7967224121094
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@112926" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(33.094482, -59.896942)
-script = ExtResource("4_whqlj")
-bulposx = 33.094482
-bulposy = -59.8969421386719
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@112976" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-114.4364, -31.210388)
-script = ExtResource("4_whqlj")
-bulposx = -114.436401367188
-bulposy = -31.2103881835938
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@113026" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-204.59412, -4.572876)
-script = ExtResource("4_whqlj")
-bulposx = -204.594116210938
-bulposy = -4.572876
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@113076" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-50.233154, 37.090942)
-script = ExtResource("4_whqlj")
-bulposx = -50.233154
-bulposy = 37.090942
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@113126" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(110.95801, 32.309875)
-script = ExtResource("4_whqlj")
-bulposx = 110.95801
-bulposy = 32.3098754882813
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@113176" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-28.376709, 101.977234)
-script = ExtResource("4_whqlj")
-bulposx = -28.376709
-bulposy = 101.977233886719
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@113226" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-184.78674, 75.33969)
-script = ExtResource("4_whqlj")
-bulposx = -184.786743164063
-bulposy = 75.3396911621094
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@113276" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(34.836548, -280.5771)
-script = ExtResource("4_whqlj")
-bulposx = 34.836548
-bulposy = -280.577087402344
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@113326" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-420.2201, -113.05858)
-script = ExtResource("4_whqlj")
-bulposx = -420.220092773438
-bulposy = -113.058578491211
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@113376" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-386.71643, -237.31915)
-script = ExtResource("4_whqlj")
-bulposx = -386.716430664063
-bulposy = -237.319152832031
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-angle = -20.3856716156006
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@113426" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-224.71106, -194.4853)
-script = ExtResource("4_whqlj")
-bulposx = -224.711059570313
-bulposy = -194.485305786133
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-angle = 150.207977294922
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@113476" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-57.6167, -154.62013)
-script = ExtResource("4_whqlj")
-bulposx = -57.6167
-bulposy = -154.620132446289
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-angle = 17.2098560333252
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@113526" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(30.171509, -151.22734)
-script = ExtResource("4_whqlj")
-bulposx = 30.171509
-bulposy = -151.227340698242
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-angle = -38.8133010864258
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@113576" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-372.29712, -160.1334)
-script = ExtResource("4_whqlj")
-bulposx = -372.29712
-bulposy = -160.133407592773
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-angle = 9.41496658325195
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@113626" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-424, -260.82303)
-script = ExtResource("4_whqlj")
-bulposx = -424.0
-bulposy = -260.823028564453
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@113676" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-321.5481, -127.63541)
-script = ExtResource("4_whqlj")
-bulposx = -321.5481
-bulposy = -127.635406494141
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@113726" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-8.044922, -169.98224)
-script = ExtResource("4_whqlj")
-bulposx = -8.044922
-bulposy = -169.982238769531
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@113776" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(32.93579, -248.5288)
-script = ExtResource("4_whqlj")
-bulposx = 32.93579
-bulposy = -248.528793334961
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@113826" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-302.4237, -260.82303)
-script = ExtResource("4_whqlj")
-bulposx = -302.423706054688
-bulposy = -260.823028564453
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@113876" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-370.72498, -310)
-script = ExtResource("4_whqlj")
-bulposx = -370.724975585938
-bulposy = -310.0
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@113926" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-359.79675, -195.25375)
-script = ExtResource("4_whqlj")
-bulposx = -359.796752929688
-bulposy = -195.253753662109
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@113976" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-214.99792, -155.63898)
-script = ExtResource("4_whqlj")
-bulposx = -214.997924804688
-bulposy = -155.638977050781
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@114026" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-9.410889, -173.39731)
-script = ExtResource("4_whqlj")
-bulposx = -9.410889
-bulposy = -173.397308349609
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@114076" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-178.11523, -258.09097)
-script = ExtResource("4_whqlj")
-bulposx = -178.11523
-bulposy = -258.090972900391
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@114126" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-325.64612, -229.40442)
-script = ExtResource("4_whqlj")
-bulposx = -325.646118164063
-bulposy = -229.404418945313
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@114176" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-415.80383, -202.7669)
-script = ExtResource("4_whqlj")
-bulposx = -415.803833007813
-bulposy = -202.766906738281
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@114226" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-261.44287, -161.10309)
-script = ExtResource("4_whqlj")
-bulposx = -261.44287
-bulposy = -161.103088378906
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@114276" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-100.25171, -165.88416)
-script = ExtResource("4_whqlj")
-bulposx = -100.25171
-bulposy = -165.884155273438
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@114326" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-239.58643, -96.2168)
-script = ExtResource("4_whqlj")
-bulposx = -239.58643
-bulposy = -96.2168
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@114376" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-395.99646, -122.85434)
-script = ExtResource("4_whqlj")
-bulposx = -395.996459960938
-bulposy = -122.854339599609
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@114426" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-93.16345, -29.577103)
-script = ExtResource("4_whqlj")
-bulposx = -93.16345
-bulposy = -29.5771026611328
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@114476" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-548.2201, 137.94142)
-script = ExtResource("4_whqlj")
-bulposx = -548.220092773438
-bulposy = 137.941421508789
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@114526" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-514.71643, 13.680847)
-script = ExtResource("4_whqlj")
-bulposx = -514.716430664063
-bulposy = 13.6808471679688
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-angle = -20.3856716156006
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@114576" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-352.71106, 56.514694)
-script = ExtResource("4_whqlj")
-bulposx = -352.711059570313
-bulposy = 56.5146942138672
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-angle = 150.207977294922
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@114626" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-185.6167, 96.37987)
-script = ExtResource("4_whqlj")
-bulposx = -185.6167
-bulposy = 96.3798675537109
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-angle = 17.2098560333252
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@114676" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-97.82849, 99.77266)
-script = ExtResource("4_whqlj")
-bulposx = -97.82849
-bulposy = 99.7726593017578
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-angle = -38.8133010864258
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@114726" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-500.29712, 90.86659)
-script = ExtResource("4_whqlj")
-bulposx = -500.29712
-bulposy = 90.8665924072266
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-angle = 9.41496658325195
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@114776" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-552, -9.823029)
-script = ExtResource("4_whqlj")
-bulposx = -552.0
-bulposy = -9.82302856445313
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@114826" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-449.5481, 123.36459)
-script = ExtResource("4_whqlj")
-bulposx = -449.5481
-bulposy = 123.364593505859
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@114876" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-136.04492, 81.01776)
-script = ExtResource("4_whqlj")
-bulposx = -136.04492
-bulposy = 81.0177612304688
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@114926" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-95.06421, 2.4712067)
-script = ExtResource("4_whqlj")
-bulposx = -95.06421
-bulposy = 2.47120666503906
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@114976" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-430.4237, -9.823029)
-script = ExtResource("4_whqlj")
-bulposx = -430.423706054688
-bulposy = -9.82302856445313
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@115026" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-498.72498, -59)
-script = ExtResource("4_whqlj")
-bulposx = -498.724975585938
-bulposy = -59.0
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@115076" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-487.79675, 55.746246)
-script = ExtResource("4_whqlj")
-bulposx = -487.796752929688
-bulposy = 55.7462463378906
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@115126" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-342.99792, 95.36102)
-script = ExtResource("4_whqlj")
-bulposx = -342.997924804688
-bulposy = 95.3610229492188
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@115176" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-137.41089, 77.60269)
-script = ExtResource("4_whqlj")
-bulposx = -137.41089
-bulposy = 77.6026916503906
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@115226" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-306.11523, -7.090973)
-script = ExtResource("4_whqlj")
-bulposx = -306.11523
-bulposy = -7.09097290039063
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@115276" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-453.64612, 21.595581)
-script = ExtResource("4_whqlj")
-bulposx = -453.646118164063
-bulposy = 21.595581
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@115326" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-543.80383, 48.233093)
-script = ExtResource("4_whqlj")
-bulposx = -543.803833007813
-bulposy = 48.2330932617188
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@115376" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-389.44287, 89.89691)
-script = ExtResource("4_whqlj")
-bulposx = -389.44287
-bulposy = 89.8969116210938
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@115426" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-228.25171, 85.115845)
-script = ExtResource("4_whqlj")
-bulposx = -228.25171
-bulposy = 85.115845
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@115476" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-367.58643, 154.7832)
-script = ExtResource("4_whqlj")
-bulposx = -367.58643
-bulposy = 154.7832
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@115526" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(-523.99646, 128.14566)
-script = ExtResource("4_whqlj")
-bulposx = -523.996459960938
-bulposy = 128.145660400391
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@115576" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(552.83655, -16.577103)
-script = ExtResource("4_whqlj")
-bulposx = 552.836547851563
-bulposy = -16.5771026611328
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@115626" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(97.77991, 150.94142)
-script = ExtResource("4_whqlj")
-bulposx = 97.77991
-bulposy = 150.941421508789
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@115676" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(131.28357, 26.680847)
-script = ExtResource("4_whqlj")
-bulposx = 131.283569335938
-bulposy = 26.6808471679688
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-angle = -20.3856716156006
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@115726" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(293.28894, 69.514694)
-script = ExtResource("4_whqlj")
-bulposx = 293.288940429688
-bulposy = 69.5146942138672
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-angle = 150.207977294922
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@115776" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(460.3833, 109.37987)
-script = ExtResource("4_whqlj")
-bulposx = 460.3833
-bulposy = 109.379867553711
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-angle = 17.2098560333252
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@115826" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(548.1715, 112.77266)
-script = ExtResource("4_whqlj")
-bulposx = 548.171508789063
-bulposy = 112.772659301758
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-angle = -38.8133010864258
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@115876" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(145.70288, 103.86659)
-script = ExtResource("4_whqlj")
-bulposx = 145.70288
-bulposy = 103.866592407227
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-angle = 9.41496658325195
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@115926" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(94, 3.1769714)
-script = ExtResource("4_whqlj")
-bulposx = 94.0
-bulposy = 3.17697143554688
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@115976" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(196.4519, 136.3646)
-script = ExtResource("4_whqlj")
-bulposx = 196.4519
-bulposy = 136.364593505859
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@116026" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(509.95508, 94.01776)
-script = ExtResource("4_whqlj")
-bulposx = 509.95508
-bulposy = 94.0177612304688
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@116076" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(550.9358, 15.471207)
-script = ExtResource("4_whqlj")
-bulposx = 550.9358
-bulposy = 15.4712066650391
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@116126" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(215.5763, 3.1769714)
+[node name="@Node2D@53194" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
+position = Vector2(-78.55939, -27.764633)
 script = ExtResource("4_whqlj")
-bulposx = 215.576293945313
-bulposy = 3.17697143554688
-startTime = 3.6
-endTime = 103.6
+bulposx = -78.5593872070313
+bulposy = -27.7646331787109
 speed = 50.0
 colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
 movable = NodePath("Area2D")
 metadata/_custom_type_script = "uid://by7j73ulg733j"
 
-[node name="@Node2D@116176" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(147.27502, -46)
+[node name="@Node2D@53195" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
+position = Vector2(-42.551697, 23.872803)
 script = ExtResource("4_whqlj")
-bulposx = 147.275024414063
-bulposy = -46.0
-startTime = 3.6
-endTime = 103.6
+bulposx = -42.5516967773438
+bulposy = 23.872803
 speed = 50.0
 colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
 movable = NodePath("Area2D")
 metadata/_custom_type_script = "uid://by7j73ulg733j"
 
-[node name="@Node2D@116226" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(158.20325, 68.74625)
+[node name="@Node2D@53196" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
+position = Vector2(-24.745667, 38.117615)
 script = ExtResource("4_whqlj")
-bulposx = 158.203247070313
-bulposy = 68.7462463378906
-startTime = 3.6
-endTime = 103.6
+bulposx = -24.7456665039063
+bulposy = 38.1176147460938
 speed = 50.0
 colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
 movable = NodePath("Area2D")
 metadata/_custom_type_script = "uid://by7j73ulg733j"
 
-[node name="@Node2D@116276" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(303.00208, 108.36102)
+[node name="@Node2D@53197" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
+position = Vector2(71.4068, 25.25772)
 script = ExtResource("4_whqlj")
-bulposx = 303.002075195313
-bulposy = 108.361022949219
-startTime = 3.6
-endTime = 103.6
+bulposx = 71.4067993164063
+bulposy = 25.2577209472656
 speed = 50.0
 colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
 movable = NodePath("Area2D")
 metadata/_custom_type_script = "uid://by7j73ulg733j"
 
-[node name="@Node2D@116326" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(508.5891, 90.60269)
+[node name="@Node2D@53198" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
+position = Vector2(46.082703, -61.002525)
 script = ExtResource("4_whqlj")
-bulposx = 508.5891
-bulposy = 90.6026916503906
-startTime = 3.6
-endTime = 103.6
+bulposx = 46.0827026367188
+bulposy = -61.0025253295898
 speed = 50.0
 colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
 movable = NodePath("Area2D")
 metadata/_custom_type_script = "uid://by7j73ulg733j"
 
-[node name="@Node2D@116376" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(339.88477, 5.909027)
+[node name="@Node2D@53199" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
+position = Vector2(-11.292236, -62.58528)
 script = ExtResource("4_whqlj")
-bulposx = 339.88477
-bulposy = 5.90902709960938
-startTime = 3.6
-endTime = 103.6
+bulposx = -11.292236
+bulposy = -62.5852813720703
 speed = 50.0
 colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
 movable = NodePath("Area2D")
 metadata/_custom_type_script = "uid://by7j73ulg733j"
 
-[node name="@Node2D@116426" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(192.35388, 34.59558)
+[node name="@Node2D@53200" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
+position = Vector2(-31.274536, -51.901672)
 script = ExtResource("4_whqlj")
-bulposx = 192.353881835938
-bulposy = 34.59558
-startTime = 3.6
-endTime = 103.6
+bulposx = -31.274536
+bulposy = -51.9016723632813
 speed = 50.0
 colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
 movable = NodePath("Area2D")
 metadata/_custom_type_script = "uid://by7j73ulg733j"
 
-[node name="@Node2D@116476" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(102.19617, 61.233093)
+[node name="@Node2D@53201" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
+position = Vector2(-42.156006, 26.444778)
 script = ExtResource("4_whqlj")
-bulposx = 102.196166992188
-bulposy = 61.2330932617188
-startTime = 3.6
-endTime = 103.6
+bulposx = -42.156006
+bulposy = 26.4447784423828
 speed = 50.0
 colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
 movable = NodePath("Area2D")
 metadata/_custom_type_script = "uid://by7j73ulg733j"
 
-[node name="@Node2D@116526" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(256.55713, 102.89691)
+[node name="@Node2D@53202" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("5_g5u5j")]
+position = Vector2(0, 48.258972)
 script = ExtResource("4_whqlj")
-bulposx = 256.55713
-bulposy = 102.896911621094
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@116576" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(417.7483, 98.115845)
-script = ExtResource("4_whqlj")
-bulposx = 417.7483
-bulposy = 98.115845
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
+id = 1
+bulposy = 48.2589721679688
+startTime = 1.565
+speed = -91.8662796020508
+angle = -90.00000250447816
 movable = NodePath("Area2D")
+saveProperties = Array[String](["id", "startTime", "endTime", "Damage", "bulposx", "bulposy", "speed"])
 metadata/_custom_type_script = "uid://by7j73ulg733j"
 
-[node name="@Node2D@116626" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(278.41357, 167.7832)
+[node name="@Node2D@53204" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("5_g5u5j")]
+visible = false
+position = Vector2(113, -93)
 script = ExtResource("4_whqlj")
-bulposx = 278.41357
-bulposy = 167.7832
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
-movable = NodePath("Area2D")
-metadata/_custom_type_script = "uid://by7j73ulg733j"
-
-[node name="@Node2D@116676" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("2_7mlct")]
-position = Vector2(122.00354, 141.14566)
-script = ExtResource("4_whqlj")
-bulposx = 122.003540039063
-bulposy = 141.145660400391
-startTime = 3.6
-endTime = 103.6
-speed = 50.0
-colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
+id = 1
+bulposx = 113.0
+bulposy = -93.0
+startTime = 1.95
+speed = -108.485229492188
+angle = 140.5453216457293
 movable = NodePath("Area2D")
+saveProperties = Array[String](["id", "startTime", "endTime", "Damage", "bulposx", "bulposy", "speed"])
 metadata/_custom_type_script = "uid://by7j73ulg733j"

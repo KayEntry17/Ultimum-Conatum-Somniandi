@@ -1,8 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bt6te2jpi7kvo"]
+[gd_scene load_steps=4 format=3 uid="uid://bt6te2jpi7kvo"]
 
 [ext_resource type="Script" uid="uid://6xka5lv4u1uc" path="res://addons/bulletEditor/globalManager.gd" id="1_ustg1"]
 [ext_resource type="Resource" uid="uid://vxpyr2ibukct" path="res://addons/bulletEditor/bulletlist1.tres" id="2_8ubgl"]
+[ext_resource type="Script" uid="uid://ctc66gh4ptmyw" path="res://addons/bulletEditor/editor_plugin.gd" id="3_x13gl"]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" node_paths=PackedStringArray("edplug")]
 script = ExtResource("1_ustg1")
 bullist = ExtResource("2_8ubgl")
+edplug = NodePath("editorPlugin")
+
+[node name="editorPlugin" type="Node" parent="."]
+script = ExtResource("3_x13gl")
