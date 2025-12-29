@@ -24,7 +24,7 @@ func remake_list():
 func rebuild_list():
 	for i in attlist:
 		var curscene=EditorInterface.get_edited_scene_root()
-		var bulin=VISDES.lists.BulletObjects[i[0]].instantiate()
+		var bulin=VISDES.bullist.BulletObjects[i[0]].instantiate()
 		var k=0
 		for j in bulin.saveProperties:
 			bulin.set(j, i[k])
@@ -37,6 +37,8 @@ func cleared_bullets():
 		if i.get("saveProperties")!=null:		
 			i.queue_free()
 func loads():
+	print("adada")
+	cleared_bullets()
 	if not FileAccess.file_exists("res://attacks/"+title+".attack"):
 		return
 	else:
@@ -47,8 +49,11 @@ func loads():
 			var json=JSON.new()
 			var parse_result=json.parse(json_string)
 			attlist=json.get_data()
+	rebuild_list()
 			
 func save():
+	remake_list()
+	cleared_bullets()
 	var save_game = FileAccess.open("res://attacks/"+title+".attack", FileAccess.WRITE)
 	var json_string=JSON.stringify(attlist)
 	save_game.store_line(json_string)

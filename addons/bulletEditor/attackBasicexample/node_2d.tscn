@@ -1,11 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1xv8rc28x7a7"]
+[gd_scene load_steps=4 format=3 uid="uid://c1xv8rc28x7a7"]
 
 [ext_resource type="Script" uid="uid://cna6xn8ei2g11" path="res://addons/bulletEditor/attackBasicexample/Attack.gd" id="1_7mlct"]
-[ext_resource type="PackedScene" uid="uid://bq5u1wue4i5ue" path="res://addons/bulletEditor/examplebullets/linear_bullet.tscn" id="2_7mlct"]
+[ext_resource type="PackedScene" uid="uid://ds5vd6tbqehhb" path="res://addons/bulletEditor/examplebullets/aimbullet.tscn" id="4_g5u5j"]
+[ext_resource type="Script" uid="uid://6wa5l3dxnn8k" path="res://aimBullet.gd" id="5_p8jcl"]
 
 [node name="AttackBase" type="Node2D"]
 script = ExtResource("1_7mlct")
+time = 51.0
 endTime = 600.0
+title = "att1"
 
-[node name="LinearBullet" parent="." instance=ExtResource("2_7mlct")]
-angle = 0.0
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="LinearBullet" type="Node2D" parent="." node_paths=PackedStringArray("movable") instance=ExtResource("4_g5u5j")]
+script = ExtResource("5_p8jcl")
+movable = NodePath("SmallBullet")
+bulposx = 2.754715
+bulposy = -22.260162
+startTime = 51.0
+endTime = 151.0
+metadata/_custom_type_script = "uid://by7j73ulg733j"

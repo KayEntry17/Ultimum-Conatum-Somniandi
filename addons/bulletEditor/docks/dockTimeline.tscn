@@ -63,7 +63,7 @@ script = ExtResource("3_ptsjh")
 visible = false
 modulate = Color(1, 0.24313726, 1, 0.5176471)
 top_level = true
-position = Vector2(585.5088, 622)
+position = Vector2(325.208, 334)
 scale = Vector2(2, 2)
 texture = ExtResource("9_36s53")
 offset = Vector2(0, -10.335)
@@ -75,7 +75,7 @@ percentdone = 50.84
 visible = false
 modulate = Color(3.85046e-07, 0.71687376, 0.8781259, 0.5176471)
 top_level = true
-position = Vector2(123.2, 622)
+position = Vector2(72, 334)
 scale = Vector2(2, 2)
 texture = ExtResource("9_36s53")
 offset = Vector2(0, -10.335)
@@ -87,7 +87,7 @@ percentdone = 10.0
 visible = false
 modulate = Color(1, 0.46666667, 0.54509807, 0.6745098)
 top_level = true
-position = Vector2(942.768, 622)
+position = Vector2(520.88, 334)
 scale = Vector2(2, 2)
 texture = ExtResource("9_36s53")
 offset = Vector2(0, -10.335)
@@ -152,7 +152,7 @@ function = "save"
 [node name="load" parent="Control/HBoxContainer" instance=ExtResource("1_g77iy")]
 layout_mode = 2
 texture_normal = ExtResource("8_fu6hu")
-function = "load"
+function = "loads"
 
 [connection signal="drag_ended" from="Control/Control/ProgressBar" to="Control/HBoxContainer/play_stop/LineEdit" method="_on_progress_bar_drag_ended"]
 [connection signal="drag_started" from="Control/Control/ProgressBar" to="Control/HBoxContainer/play_stop/LineEdit" method="_on_progress_bar_drag_started"]

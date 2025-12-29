@@ -16,7 +16,11 @@ func refresh_list():
 		newen.sprite=VISDES.bullist.BulletTextures[i]
 		newen.connect("chosen", on_chosen)
 		tabarr[VISDES.bullist.BulletCategories[i]].add_child(newen)
-		
+func _process(delta: float) -> void:
+	#print("argvark")	
+	if VISDES.curid<0:
+		on_chosen(-1)
+		#print("argvark")		
 func on_chosen(bulid: int):
 	for i in tabarr:
 		for j in i.get_children():

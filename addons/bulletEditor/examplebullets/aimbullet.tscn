@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ds5vd6tbqehhb"]
+
+[ext_resource type="Script" uid="uid://6wa5l3dxnn8k" path="res://aimBullet.gd" id="1_dxdy2"]
+[ext_resource type="Texture2D" uid="uid://q2mllmbewx1y" path="res://addons/bulletEditor/assets/Small_bullet.png" id="2_xnomi"]
+
+[node name="AimingBullet" type="Node2D" node_paths=PackedStringArray("movable")]
+script = ExtResource("1_dxdy2")
+movable = NodePath("SmallBullet")
+metadata/_custom_type_script = "uid://by7j73ulg733j"
+
+[node name="SmallBullet" type="Sprite2D" parent="."]
+texture = ExtResource("2_xnomi")

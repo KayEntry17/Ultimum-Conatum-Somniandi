@@ -3,18 +3,22 @@
 [ext_resource type="Script" uid="uid://by7j73ulg733j" path="res://addons/bulletEditor/examplebullets/LinearBullet.gd" id="1_332im"]
 [ext_resource type="Texture2D" uid="uid://q2mllmbewx1y" path="res://addons/bulletEditor/assets/Small_bullet.png" id="2_uto1v"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_m5chy"]
-radius = 2.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_iuvff"]
+radius = 3.0
 
-[node name="LinearBullet" type="Area2D"]
+[node name="LinearBullet" type="Node2D" node_paths=PackedStringArray("movable")]
 script = ExtResource("1_332im")
-modTime = 28.455
+colhint = Color(0.70980394, 0.4, 0.7137255, 0.61960787)
+movable = NodePath("Area2D")
 metadata/_custom_type_script = "uid://by7j73ulg733j"
 
-[node name="SmallBullet" type="Sprite2D" parent="."]
-position = Vector2(0, 1)
-texture = ExtResource("2_uto1v")
-offset = Vector2(0.5, -0.5)
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+monitoring = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_m5chy")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_iuvff")
+
+[node name="SmallBullet" type="Sprite2D" parent="Area2D"]
+position = Vector2(1, 1)
+texture = ExtResource("2_uto1v")
